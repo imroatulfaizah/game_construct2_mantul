@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMateri</name>
+    <events>
+        <event-block sid="8379779612375323">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="8402249588316082" type="System">
+                    <param id="0" name="Layer">&quot;materi1&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="22715888804859">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="3163875465071366" type="Touch">
+                            <param id="0" name="Object">Button_10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="552392919028729" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="1499338188601554" type="System">
+                            <param id="0" name="Layer">&quot;materi1&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="125695888812581" type="System">
+                            <param id="0" name="Layer">&quot;materi2&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5326766087253025">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="7117228601763326" type="System">
+                    <param id="0" name="Layer">&quot;materi2&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="168971000234909">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="433136266798019" type="Touch">
+                            <param id="0" name="Object">Button_11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1118471641985792" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="8158278893688064" type="System">
+                            <param id="0" name="Layer">&quot;materi2&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="8204065706383556" type="System">
+                            <param id="0" name="Layer">&quot;materi3&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6721000929481142">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="8479397521008726" type="System">
+                    <param id="0" name="Layer">&quot;materi3&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6221619207789644">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="2771494681994783" type="Touch">
+                            <param id="0" name="Object">Button_12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1229448505796676" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="3910722171555365" type="System">
+                            <param id="0" name="Layer">&quot;materi3&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="3605990862706511" type="System">
+                            <param id="0" name="Layer">&quot;materi4&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7205547122235908">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="6699792838579692" type="System">
+                    <param id="0" name="Layer">&quot;materi4&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1231320295165883">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="5624783398904992" type="Touch">
+                            <param id="0" name="Object">Button_13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="7396517025246496" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="1618616261496036" type="System">
+                            <param id="0" name="Layer">&quot;materi4&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="8546484557051713" type="System">
+                            <param id="0" name="Layer">&quot;materi5&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5676016417153759">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="2602149650509743" type="System">
+                    <param id="0" name="Layer">&quot;materi5&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1782892050474822">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="1457897426932857" type="Touch">
+                            <param id="0" name="Object">Button_14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="4530737094933837" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="7121921670494963" type="System">
+                            <param id="0" name="Layer">&quot;materi5&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="6414498922437813" type="System">
+                            <param id="0" name="Layer">&quot;materi6&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5418362959256291">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="3710147982063582" type="System">
+                    <param id="0" name="Layer">&quot;materi6&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6133008673080604">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="8591467398768745" type="Touch">
+                            <param id="0" name="Object">Button_15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="867472173704849" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2684614414012294" type="System">
+                            <param id="0" name="Layer">&quot;materi6&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="4910884336454436" type="System">
+                            <param id="0" name="Layout">&quot;Home&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

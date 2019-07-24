@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eHome</name>
+    <events>
+        <event-block sid="2750212998663442">
+            <conditions>
+                <condition id="17" name="On tap object" sid="9187875643049235" type="Touch">
+                    <param id="0" name="Object">Button_23</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6558717345312613" type="System">
+                    <param id="0" name="Layout">&quot;Materi&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4343846852358842">
+            <conditions>
+                <condition id="17" name="On tap object" sid="8354646468333147" type="Touch">
+                    <param id="0" name="Object">Button_3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="7287824462438313" type="System">
+                    <param id="0" name="Layout">&quot;Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

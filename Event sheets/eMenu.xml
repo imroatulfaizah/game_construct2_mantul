@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMenu</name>
+    <events>
+        <variable constant="0" name="Level" sid="5525848526870613" static="0" type="number">1</variable>
+        <event-block sid="9239105637728211">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3881565553137081" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4960774506904455">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3671249689211374" type="level">
+                            <param id="0" name="Instance variable">lev</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="8983976575663653" type="level">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5518995808599582" type="level">
+                            <param id="0" name="Object">angka</param>
+                            <param id="1" name="Layer">&quot;level&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5278554339791721" type="angka">
+                            <param id="0" name="Text">Level.lev</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6911760518262395">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8151122935580036" type="level">
+                            <param id="0" name="Instance variable">lev</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9592481205706935" type="level">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6672316128166095">
+            <conditions>
+                <condition id="17" name="On tap object" sid="9020373852926319" type="Touch">
+                    <param id="0" name="Object">level</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="3865238939981373" type="level">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1142706792092108" type="System">
+                    <param id="0" name="Layout">str(level.lev)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7819712946003689">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="5702858143583939" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8229684130399096">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2546155755132823" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="983263441276989" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6289550285470569">
+            <conditions>
+                <condition id="17" name="On tap object" sid="7722087680069681" type="Touch">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="1507016044335433" type="btnHome">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6655837840445914" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="576175183196799" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8048514718389869">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4303544315841129" type="playerGrey">
+                    <param id="0" name="Object">doorGreen_lock</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="7823539951359116" type="doorGreen_lock">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="1866111741838874" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-12" name="Set group active" sid="1728601526354019" type="System">
+                    <param id="0" name="Group name">&quot;Player&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4590037150994462" type="System">
+                    <param id="0" name="Layer">&quot;Soal&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5603684682843269">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4294198742311966" type="System">
+                            <param id="0" name="Variable">Sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="9088949043705502" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="4619750159182207" type="Audio">
+                            <param id="0" name="Audio file">Jingle Win</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

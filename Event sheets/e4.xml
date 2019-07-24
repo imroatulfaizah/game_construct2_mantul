@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e4</name>
+    <events>
+        <event-block sid="7889192927068173">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="855312705622051" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4402794247132177" type="puzzle_rumah4">
+                    <param id="0" name="X">round(random(512,1024))</param>
+                    <param id="1" name="Y">round(random(150, 512))</param>
+                </action>
+                <action id="-10" name="Set value" sid="4112261869674989" type="puzzle_rumah4">
+                    <param id="0" name="Instance variable">sequence</param>
+                    <param id="1" name="Value">Self.IID</param>
+                </action>
+                <action id="-10" name="Set value" sid="5661471883740026" type="grid_4">
+                    <param id="0" name="Instance variable">sequence</param>
+                    <param id="1" name="Value">puzzle_rumah4.sequence</param>
+                </action>
+                <action id="-9" name="Set value" sid="4879544766697614" type="System">
+                    <param id="0" name="Variable">posisiP_2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1609615967588659" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5229915865922524" type="System">
+                    <param id="0" name="Layer">&quot;welcome&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="52106122374935" type="System">
+                    <param id="0" name="Layer">&quot;puzzle&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="23847871024714" title="puzzle_4">
+            <sub-events>
+                <event-block sid="4913407991751688">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="2952839077360325" type="System">
+                            <param id="0" name="Layer">&quot;puzzle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="862311172687666">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="4922196618632123" type="puzzle_rumah4" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3783018414110142">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6001700531455662" type="grid_4">
+                                            <param id="0" name="Instance variable">sequence</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">puzzle_rumah4.sequence</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2973597567289338" type="grid_4">
+                                            <param id="0" name="Object">puzzle_rumah4</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="9525310245795519" type="System">
+                                            <param id="0" name="First value">distance(grid_4.X,grid_4.Y,puzzle_rumah4.X,puzzle_rumah4.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="4678592422110402" type="puzzle_rumah4">
+                                            <param id="0" name="X">grid_4.X</param>
+                                            <param id="1" name="Y">grid_4.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5408578709701966">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="554699596235846" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">puzzle_rumah4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7124096163109296">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3244329403849564" type="grid_4">
+                                    <param id="0" name="Object">puzzle_rumah4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4340902038865272">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1668891380577386" type="System">
+                                            <param id="0" name="First value">grid_4.posisi</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">puzzle_rumah4.posisi</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1979310589476207">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="5307865401673406" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="740415836626464" type="System">
+                                                    <param id="0" name="Variable">posisiP_2</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9931803604976755">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6065537384146446" type="System">
+                                    <param id="0" name="Variable">posisiP_2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="3624610517210458" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1123704141573604" type="System">
+                                    <param id="0" name="Variable">posisiP_2</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="5758146511802312" type="System">
+                                    <param id="0" name="Layer">&quot;soal1&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4812643045551611" title="soal1_4">
+            <sub-events>
+                <event-block sid="8048557931376404">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="8831250976270778" type="System">
+                            <param id="0" name="Layer">&quot;soal1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="380447753518935">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="3973381719122308" type="Touch">
+                                    <param id="0" name="Object">j1a4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="9134776790106078" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486884135556449">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="5087131428105445" type="Touch">
+                                    <param id="0" name="Object">j1b4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4555246716337286" type="puzzle_rumah4">
+                                    <param id="0" name="X">3920</param>
+                                    <param id="1" name="Y">945</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="8467270326497685" type="System">
+                                    <param id="0" name="Layer">&quot;benar&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2611177568220089" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="2619464918147414" type="System">
+                                    <param id="0" name="Layer">&quot;benar&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="174700053384378" type="System">
+                                    <param id="0" name="Layer">&quot;soal1&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1553857052863556" type="txtPuzzle" />
+                                <action id="-4" name="Set layer visible" sid="7552731533892588" type="System">
+                                    <param id="0" name="Layer">&quot;soal2&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4430251901791097">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="2698536424555444" type="Touch">
+                                    <param id="0" name="Object">j1c4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="8972865165474457" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4927157752118152">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="3710844895640347" type="Touch">
+                                    <param id="0" name="Object">j1d4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="1327545724813581" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="593432775016093" title="soal2_4">
+            <sub-events>
+                <event-block sid="8048557931376404">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="8831250976270778" type="System">
+                            <param id="0" name="Layer">&quot;soal2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="380447753518935">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="3973381719122308" type="Touch">
+                                    <param id="0" name="Object">j2a4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="9134776790106078" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486884135556449">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="5087131428105445" type="Touch">
+                                    <param id="0" name="Object">j2b4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="174700053384378" type="System">
+                                    <param id="0" name="Layer">&quot;soal2&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="7552731533892588" type="System">
+                                    <param id="0" name="Layer">&quot;benar2&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4430251901791097">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="2698536424555444" type="Touch">
+                                    <param id="0" name="Object">j2c4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="8972865165474457" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4927157752118152">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="3710844895640347" type="Touch">
+                                    <param id="0" name="Object">j2d4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="1327545724813581" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6615131291048308" title="salah_3">
+            <sub-events>
+                <event-block sid="4412136111648647">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="1294297764648593" type="System">
+                            <param id="0" name="Layer">&quot;Salah&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3919384537332034">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="3036003279839079" type="Touch">
+                                    <param id="0" name="Object">Restart</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="6913182972649257" type="System">
+                                    <param id="0" name="Layer">&quot;Salah&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="2885227915162922" type="System" />
+                                <action id="-4" name="Set layer visible" sid="4471684289430074" type="System">
+                                    <param id="0" name="Layer">&quot;soal1&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="251871292953755" type="System">
+                                    <param id="0" name="Layer">&quot;soal2&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7130680688846898">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="1825047045927369" type="Touch">
+                                    <param id="0" name="Object">Home</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="8310967625593789" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4820487364225908" title="benar_3">
+            <sub-events>
+                <event-block sid="7337435015899167">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="9386472476060379" type="System">
+                            <param id="0" name="Layer">&quot;benar2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8316730242045504">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="8405412497403571" type="Touch">
+                                    <param id="0" name="Object">Next</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="7565639653611722" type="System">
+                                    <param id="0" name="Layout">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6563959089241822">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="5181643845629667" type="Touch">
+                                    <param id="0" name="Object">Home</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="5103162229827144" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
